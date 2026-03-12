@@ -1,9 +1,8 @@
 spring:
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: create
-    defer-datasource-initialization: true
     properties:
       hibernate:
         format_sql: true
+
+        defer-datasource-initialization: true
