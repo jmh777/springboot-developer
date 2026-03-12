@@ -1,4 +1,4 @@
-package me.jiangminghan.springbootdeveloper;
+package me.jiangminghan.springdeveloper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
