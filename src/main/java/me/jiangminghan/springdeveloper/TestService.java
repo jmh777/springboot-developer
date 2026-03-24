@@ -6,15 +6,14 @@ import java.util.List;
 
 @Service
 public class TestService {
-
     @Autowired
-    MemberRepository memberRepository;
+    TestRepository testRepository;
 
     public List<Member> getAllMembers() {
-        return memberRepository.findAll();
+        return testRepository.findAll();
     }
 
     public Member saveMember(Member member){
-        return memberRepository.save(member);
+        return testRepository.save(member);
     }
 }

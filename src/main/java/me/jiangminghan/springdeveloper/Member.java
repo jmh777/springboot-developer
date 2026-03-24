@@ -21,4 +21,9 @@ public class Member {
     private String name;
     @Column(name = "email")
     private String email;
+
+    public Member(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 }
