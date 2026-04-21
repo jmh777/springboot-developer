@@ -1,5 +1,6 @@
 package me.scpark.springdeveloper.service;
 
+
 import lombok.RequiredArgsConstructor;
 import me.scpark.springdeveloper.dao.Article;
 import me.scpark.springdeveloper.dto.AddArticleRequest;
@@ -16,13 +17,11 @@ public class BlogService {
     public Article save(AddArticleRequest articleRequest) {
         return blogRepository.save(articleRequest.toEntity());
     }
-
-    public List<Article> findAll() {
+    public List<Article>findAll(){
         return blogRepository.findAll();
     }
-
-    public Article findById(Long id) {
+    public Article findById(long id){
         return blogRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
+                .orElseThrow(()->new IllegalArgumentException("not found"+id));
     }
 }
