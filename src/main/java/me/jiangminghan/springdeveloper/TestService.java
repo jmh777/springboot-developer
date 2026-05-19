@@ -2,18 +2,18 @@ package me.jiangminghan.springdeveloper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
 public class TestService {
     @Autowired
-    TestRepository testRepository;
-
-    public List<Member> getAllMembers() {
-        return testRepository.findAll();
+    TestRepository memberRepository;
+    public List<Member> getAllMembers(){
+        return memberRepository.findAll();
     }
 
     public Member saveMember(Member member){
-        return testRepository.save(member);
+        return memberRepository.save(member);//insert into member(id,name) value()
     }
 }
